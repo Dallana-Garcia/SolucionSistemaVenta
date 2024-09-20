@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@* 
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <h1 class="h3 mb-4 text-gray-800">WELCOME</h1>
+    <div class="row">
+
+        <!-- Tarjeta - Dashboard -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-tachometer-alt fa-2x text-danger"></i>
+                        </div>
+                        <div class="col">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Dashboard</div>
+                            <a href="@Url.Action("Index", "Dashboard")" class="btn btn-danger">Ir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta - Administración -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-bodys">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-cog fa-2x text-danger"></i>
+                        </div>
+                        <div class="col">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Administración</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("Index", "Usuario")">Usuarios</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("Index", "Negocio")">Negocio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta - Inventario -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-bodys">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-clipboard-list fa-2x text-danger"></i>
+                        </div>
+                        <div class="col">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Inventario</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("Index", "Categoria")">Categorías</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("Index", "Producto")">Productos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta - Ventas -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-bodys">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-tags fa-2x text-danger"></i>
+                        </div>
+                        <div class="col">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Ventas</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("NuevaVenta", "Venta")">Nueva Venta</a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("HistorialVenta", "Venta")">Historial Venta</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta - Reportes -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-bodys">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i class="fas fa-fw fa-chart-area fa-2x text-danger"></i>
+                        </div>
+                        <div class="col">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Reportes</div>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="btn btn-link" href="@Url.Action("Index", "Reporte")">Reporte de Ventas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
