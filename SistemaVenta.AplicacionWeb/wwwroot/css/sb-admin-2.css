@@ -4573,9 +4573,17 @@ car {
 
 }
 
+.card-hover {
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+    .card-hover:hover {
+        transform: scale(1.05); /* Aumento del tamaño al pasar el mouse */
+    }
+
 .card > hr {
-  margin-right: 0;
-  margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .card > .list-group {

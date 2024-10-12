@@ -1,20 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@* 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> *@
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-800">WELCOME</h1>
+    <h1 class="h3 mb-4 text-gray-800 text-center">¡Bienvenido!</h1>
     <div class="row">
 
         <!-- Tarjeta - Dashboard -->
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card border-left-danger shadow h-100 py-2 card-hover">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
@@ -31,8 +26,8 @@
 
         <!-- Tarjeta - Administración -->
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-bodys">
+            <div class="card border-left-danger shadow h-100 py-2 card-hover">
+                <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fas fa-fw fa-cog fa-2x text-danger"></i>
@@ -41,10 +36,10 @@
                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Administración</div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("Index", "Usuario")">Usuarios</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("Index", "Usuario")">Usuarios</a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("Index", "Negocio")">Negocio</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("Index", "Negocio")">Negocio</a>
                                 </li>
                             </ul>
                         </div>
@@ -55,8 +50,8 @@
 
         <!-- Tarjeta - Inventario -->
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-bodys">
+            <div class="card border-left-danger shadow h-100 py-2 card-hover">
+                <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fas fa-fw fa-clipboard-list fa-2x text-danger"></i>
@@ -65,10 +60,10 @@
                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Inventario</div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("Index", "Categoria")">Categorías</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("Index", "Categoria")">Categorías</a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("Index", "Producto")">Productos</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("Index", "Producto")">Productos</a>
                                 </li>
                             </ul>
                         </div>
@@ -79,8 +74,8 @@
 
         <!-- Tarjeta - Ventas -->
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-bodys">
+            <div class="card border-left-danger shadow h-100 py-2 card-hover">
+                <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fas fa-fw fa-tags fa-2x text-danger"></i>
@@ -89,10 +84,10 @@
                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Ventas</div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("NuevaVenta", "Venta")">Nueva Venta</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("NuevaVenta", "Venta")">Nueva Venta</a>
                                 </li>
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("HistorialVenta", "Venta")">Historial Venta</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("HistorialVenta", "Venta")">Historial Venta</a>
                                 </li>
                             </ul>
                         </div>
@@ -103,8 +98,8 @@
 
         <!-- Tarjeta - Reportes -->
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-bodys">
+            <div class="card border-left-danger shadow h-100 py-2 card-hover">
+                <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <i class="fas fa-fw fa-chart-area fa-2x text-danger"></i>
@@ -113,7 +108,7 @@
                             <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Reportes</div>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a class="btn btn-link" href="@Url.Action("Index", "Reporte")">Reporte de Ventas</a>
+                                    <a class="btn btn-link text-danger" href="@Url.Action("Index", "Reporte")">Reporte de Ventas</a>
                                 </li>
                             </ul>
                         </div>
@@ -124,5 +119,18 @@
 
     </div>
 </div>
+
+<!-- Estilos adicionales -->
+<style>
+    .card-hover {
+        transition: transform 0.3s ease; /* Efecto de transición */
+    }
+
+    .card-hover:hover {
+        transform: scale(1.05); /* Aumento del tamaño al pasar el mouse */
+    }
+</style>
+
+
 
 

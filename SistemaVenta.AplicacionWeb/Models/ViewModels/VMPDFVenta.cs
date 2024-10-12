@@ -4,6 +4,6 @@
     {
         public VMNegocio? negocio {  get; set; }
 
-        public VMPDFVenta? venta { get; set; }  
+        public VMVenta? venta { get; set; }  
     }
 }

@@ -1,0 +1,62 @@
+﻿/* Estilo general para la tabla */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 1rem; /* Espacio entre filas */
+}
+
+    .table th {
+        background-color: #f8d1d1; /* Color de fondo del encabezado */
+        color: #7a1b2d; /* Color de texto del encabezado */
+        border: none; /* Sin bordes para un look limpio */
+        border-radius: 0.25rem; /* Bordes redondeados en encabezados */
+        font-weight: bold;
+    }
+
+    .table td {
+        background-color: #ffffff; /* Color de fondo de las celdas */
+        color: #333; /* Color de texto */
+        border: 1px solid #f8d1d1; /* Borde delgado y ligero */
+        border-radius: 0.25rem; /* Bordes redondeados en celdas */
+        vertical-align: middle; /* Alinear verticalmente el contenido */
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f1f1; /* Color de fondo para filas impares */
+}
+
+/* Estilo para los botones dentro de la tabla */
+.btn-custom {
+    background-color: #f8d1d1;
+    border-color: #f8d1d1;
+    color: #7a1b2d;
+}
+
+    .btn-custom:hover {
+        background-color: #f5b2b2; /* Color en hover */
+        border-color: #f5b2b2; /* Color en hover */
+    }
+
+/* Estilo para el modal */
+.modal-header {
+    background-color: #f8d1d1; /* Color de fondo del encabezado del modal */
+    color: #7a1b2d; /* Color de texto */
+    border-bottom: none; /* Sin borde inferior */
+    border-radius: 0.5rem 0.5rem 0 0; /* Bordes redondeados en el encabezado */
+}
+
+.modal-title {
+    margin: 0; /* Eliminar márgenes del título */
+    font-weight: bold; /* Negrita */
+}
+
+.modal-footer {
+    background-color: #f9f1f1; /* Color de fondo del pie del modal */
+}
+
+.modal-content {
+    border-radius: 0.5rem; /* Bordes redondeados para el contenido del modal */
+}
+
+.modal-body .form-control {
+    border-radius: 0.25rem; /* Bordes redondeados para los inputs */
+}
