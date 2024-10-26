@@ -1,0 +1,46 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-control {
+    border: 2px solid #FFA07A; /* Borde naranja pastel */
+}
+
+.titulo {
+    font-family: 'Great Vibes', cursive; /* Fuente bonita para el título */
+    font-size: 3rem; /* Ajusta el tamaño según tus preferencias */
+}
+
+.card {
+    background-color: rgba(192, 108, 148, 0.8); /* Color rosado con transparencia */
+    border-radius: 15px; /* Opcional: redondea las esquinas de la tarjeta */
+}
+
+.btn-naranja {
+    background-color: #FFA07A; /* Color naranja pastel */
+    color: white; /* Color del texto en blanco */
+}
+
+    .btn-naranja:hover {
+        background-color: #ff7f50; /* Color más oscuro al pasar el mouse */
+    }
+
+.label-blanco {
+    color: white; /* Color de letra blanca */
+}
+
+.texto-blanco {
+    color: white; /* Color de letra blanca */
+}
+
+/* Estilos específicos para cada página */
+.bg-gradient-danger {
+    background-color: #dc3545; /* Fondo para el login */
+}
+
+.bg-gradient-info {
+    background-color: #17a2b8; /* Fondo para el restablecer clave */
+}

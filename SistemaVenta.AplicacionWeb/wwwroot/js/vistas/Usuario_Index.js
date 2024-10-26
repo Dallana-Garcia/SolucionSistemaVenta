@@ -1,6 +1,4 @@
-﻿
-
-const MODELO_BASE = {
+﻿const MODELO_BASE = {
     idUsuario: 0,
     nombre: "",
     correo: "",
@@ -12,8 +10,6 @@ const MODELO_BASE = {
 
 let tablaData;
 $(document).ready(function () {
-
-
 
     fetch("/Usuario/ListaRoles")
         .then(response => {
@@ -102,8 +98,6 @@ function mostrarModal(modelo = MODELO_BASE) {
 $("#btnNuevo").click(function(){
     mostrarModal()
 })
-
-
 
 $("#btnGuardar").click(function () {
 

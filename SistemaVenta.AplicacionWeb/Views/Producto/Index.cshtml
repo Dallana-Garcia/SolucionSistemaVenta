@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Productos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -12,6 +11,70 @@
     <link rel="stylesheet" href="~/vendor/datatables/extensiones/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="~/vendor/datatables/extensiones/css/buttons.dataTables.min.css">
 
+    <style>
+        /* Estilo general para la tabla */
+        .table {
+            border-collapse: separate;
+            border-spacing: 0 1rem; /* Espacio entre filas */
+        }
+
+            .table th {
+                background-color: #f8d1d1; /* Color de fondo del encabezado */
+                color: #7a1b2d; /* Color de texto del encabezado */
+                border: none; /* Sin bordes para un look limpio */
+                border-radius: 0.25rem; /* Bordes redondeados en encabezados */
+                font-weight: bold;
+            }
+
+            .table td {
+                background-color: #ffffff; /* Color de fondo de las celdas */
+                color: #333; /* Color de texto */
+                border: 1px solid #f8d1d1; /* Borde delgado y ligero */
+                border-radius: 0.25rem; /* Bordes redondeados en celdas */
+                vertical-align: middle; /* Alinear verticalmente el contenido */
+            }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f1f1; /* Color de fondo para filas impares */
+        }
+
+        /* Estilo adicional para el botón */
+        #btnNuevo {
+            float: right; /* Mover el botón a la derecha */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        /* Estilo para los botones dentro de la tabla */
+        .btn-custom {
+            background-color: #f8d1d1;
+            border-color: #f8d1d1;
+            color: #7a1b2d;
+        }
+
+            .btn-custom:hover {
+                background-color: #f5b2b2; /* Color en hover */
+                border-color: #f5b2b2; /* Color en hover */
+            }
+
+        /* Estilo del modal */
+        .modal-header {
+            background-color: #f8d1d1; /* Color de fondo rosa pastel */
+            color: #7a1b2d; /* Color de texto */
+            border-bottom: none; /* Sin borde inferior */
+        }
+
+        .modal-content {
+            border-radius: 0.25rem; /* Bordes redondeados */
+        }
+
+        .modal-body {
+            padding: 20px; /* Espaciado interno */
+        }
+
+        .rounded {
+            border-radius: 0.25rem; /* Bordes redondeados para la imagen */
+        }
+    </style>
 }
 
 <!-- DataTales Example -->
@@ -21,29 +84,30 @@
     </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-12">
                 <button class="btn btn-success" id="btnNuevo"><i class="fas fa-plus-circle"></i> Nuevo Producto</button>
             </div>
         </div>
         <hr />
         <div class="row">
             <div class="col-sm-12">
-                <table class="table table-bordered" id="tbdata" cellspacing="0" style="width:100%">
+                <table class="table table-sm table-striped" id="tbdata" cellspacing="0" style="width:100%">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Imagen</th>
-                            <th>Codigo Barra</th>
+                            <th>Codigo</th>
                             <th>Marca</th>
                             <th>Descripcion</th>
                             <th>Categoria</th>
                             <th>Stock</th>
                             <th>Precio</th>
                             <th>Estado</th>
-                            <th>Acciones</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Contenido de la tabla -->
                     </tbody>
                 </table>
             </div>
@@ -68,7 +132,7 @@
                         <div class="col-sm-8">
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
-                                    <label for="txtCodigoBarra">Codigo Barra</label>
+                                    <label for="txtCodigoBarra">Codigo</label>
                                     <input type="text" class="form-control form-control-sm input-validar" id="txtCodigoBarra" name="Codigo Barra">
                                 </div>
                                 <div class="form-group col-sm-6">
@@ -86,7 +150,7 @@
                                 <div class="form-group col-sm-6">
                                     <label for="cboCategoria">Categoria</label>
                                     <select class="form-control form-control-sm" id="cboCategoria">
-                                        
+                                        <!-- Opciones de categorías -->
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-6">
@@ -117,13 +181,12 @@
                         <div class="col-sm-4">
                             <img id="imgProducto" style="max-width:200px;" src="" class="rounded mx-auto d-block" alt="...">
                         </div>
-
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary btn-sm" type="button" id="btnGuardar">Guardar</button>
-                <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger btn-sm" type="button" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
@@ -135,15 +198,13 @@
     ===============================================================-->
     <script src="~/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="~/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
     <script src="~/vendor/datatables/extensiones/js/dataTables.responsive.min.js"></script>
-
     <script src="~/vendor/datatables/extensiones/js/dataTables.buttons.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/jszip.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.html5.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.print.min.js"></script>
-    
+
     <script src="~/js/vistas/Producto_Index.js"></script>
     <!-- SOLO ES DE EJEMPLO - IGNORAR -->
-    <script src="~/js/vistas/datatables-demo.js"></script>
+    @* <script src="~/js/vistas/datatables-demo.js"></script> *@
 }

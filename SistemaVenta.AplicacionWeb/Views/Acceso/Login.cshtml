@@ -1,6 +1,6 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMUsuarioLogin;
 @{
-	Layout=null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -17,11 +17,47 @@
 
     <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Letra bonita -->
     <!-- Custom styles for this template-->
     <link href="~/css/sb-admin-2.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #dc3545; /* Fondo original */
+        }
+
+        .form-control {
+            border: 2px solid #FFA07A; /* Borde naranja pastel */
+        }
+
+        .titulo {
+            font-family: 'Great Vibes', cursive; /* Fuente bonita para el título */
+            font-size: 3rem; /* Ajusta el tamaño según tus preferencias */
+        }
+
+        .card {
+            background-color: rgba(192, 108, 148, 0.8); /* Color rosado con transparencia */
+            border-radius: 15px; /* Opcional: redondea las esquinas de la tarjeta */
+        }
+
+        .btn-naranja {
+            background-color: #FFA07A; /* Color naranja pastel */
+            color: white; /* Color del texto en blanco */
+        }
+
+            .btn-naranja:hover {
+                background-color: #ff7f50; /* Color más oscuro al pasar el mouse */
+            }
+
+        .label-blanco {
+            color: white; /* Color de letra blanca */
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-danger">
@@ -33,15 +69,15 @@
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div class="cards o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            
+
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Variedades Danna</h1>
+                                        <h1 class="titulo">Variedades Danna</h1>
                                     </div>
                                     <form class="user" asp-controller="Acceso" asp-action="Login" method="post">
                                         <div class="form-group">
@@ -53,20 +89,20 @@
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="chkMantenerSesion" asp-for="MantenerSesion">
-                                                <label class="custom-control-label" for="chkMantenerSesion">Mantener Sesión</label>
+                                                <label class="custom-control-label label-blanco" for="chkMantenerSesion">Mantener Sesión</label>
                                             </div>
                                         </div>
 
                                         @if (ViewData["Mensaje"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-danger" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-danger" role="alert">
                                                     @ViewData["Mensaje"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
 
-                                        <button type="submit" class="btn btn-dark btn-user btn-block">
+                                        <button type="submit" class="btn btn-naranja btn-user btn-block">
                                             Ingresar
                                         </button>
                                     </form>
@@ -87,7 +123,7 @@
 
     </div>
 
-
 </body>
 
 </html>
+

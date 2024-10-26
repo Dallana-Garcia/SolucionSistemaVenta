@@ -49,7 +49,7 @@ $(document).ready(function () {
             processResults: function (data,) {
 
                 return {
-                    results: data.map((item)=>(
+                    results: data.map((item) => (
                         {
                             //Para mostrar la información es necesario de un id y un texto
                             id: item.idProducto,
@@ -58,6 +58,8 @@ $(document).ready(function () {
                             categoria: item.nombreCategoria,
                             urlImagen: item.urlImagen,
                             precio: parseFloat(item.precio)
+
+
                         }
                     ))
                 };
@@ -90,7 +92,7 @@ function formatoResultados(data) {
           </tr>
         </table>`
     );
-    return contenedor;  
+    return contenedor;
 }
 
 
@@ -101,6 +103,7 @@ $(document).on("select2:open", function () {
 })
 
 let ProductosParaVenta = [];
+
 
 $("#cboBuscarProducto").on("select2:select", function (e) {
     const data = e.params.data;
@@ -227,7 +230,7 @@ $("#btnTerminarVenta").click(function () {
     //Lógica de envío para terminar una venta
     fetch("/Venta/RegistrarVenta", {
         method: "POST",
-        headers: {"Content-Type":"application/json; charset=utf-8" },
+        headers: { "Content-Type": "application/json; charset=utf-8" },
         body: JSON.stringify(venta)
     })
         .then(response => {

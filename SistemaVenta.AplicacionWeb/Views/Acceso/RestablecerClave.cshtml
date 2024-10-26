@@ -1,27 +1,63 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMUsuarioLogin;
 @{
-	Layout = null;
+    Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Mi Tienda - Restablecer Clave</title>
+    <title>Variedades Danna - Restablecer Clave</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- Letra bonita -->
     <!-- Custom styles for this template-->
     <link href="~/css/sb-admin-2.css" rel="stylesheet">
 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #17a2b8; /* Fondo original para la página */
+        }
+
+        .titulo {
+            font-family: 'Great Vibes', cursive; /* Fuente bonita para el título */
+            font-size: 3rem; /* Ajusta el tamaño según tus preferencias */
+        }
+
+        .card {
+            background-color: rgba(192, 108, 148, 0.8); /* Color rosado con transparencia */
+            border-radius: 15px; /* Opcional: redondea las esquinas de la tarjeta */
+        }
+
+        .form-control {
+            border: 2px solid #FFA07A; /* Borde naranja pastel */
+        }
+
+        .btn-naranja {
+            background-color: #FFA07A; /* Color naranja pastel */
+            color: white; /* Color del texto en blanco */
+        }
+
+        .btn-naranja:hover {
+            background-color: #ff7f50; /* Color más oscuro al pasar el mouse */
+        }
+
+        .texto-blanco {
+            color: white; /* Color de letra blanca */
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-info">
@@ -37,36 +73,36 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-2">¿Olvidó su contraseña?</h1>
-                                        <p class="mb-4">Ingrese su correo de sesión y le enviaremos una nueva contraseña</p>
+                                        <h1 class="titulo">¿Olvidó su contraseña?</h1>
+                                        <p class="mb-4 texto-blanco">Ingrese su correo de sesión y le enviaremos una nueva contraseña.</p>
                                     </div>
                                     <form class="user" asp-controller="Acceso" asp-action="RestablecerClave" method="post">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" asp-for="Correo" placeholder="Ingrese su correo">
                                         </div>
-                                        
+
                                         @if (ViewData["Mensaje"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-success" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-success" role="alert">
                                                     @ViewData["Mensaje"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
                                         @if (ViewData["MensajeError"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-danger" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-danger" role="alert">
                                                     @ViewData["MensajeError"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
-                                        
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+
+                                        <button type="submit" class="btn btn-naranja btn-user btn-block">
                                             Reestablecer Contraseña
                                         </button>
                                     </form>
@@ -89,3 +125,4 @@
 </body>
 
 </html>
+

@@ -4,72 +4,93 @@
 }
 
 @section Estilos {
-    <!-- ============================================================
-    =ESTILOS PARA ESTA PAGINA
-    ===============================================================-->
     <link href="~/vendor/select2/select2.min.css" rel="stylesheet">
 
     <style>
+        /* Reset y estilo básico */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* Color de fondo general */
+        }
+
         .select2 {
             width: 100% !important;
         }
 
         /* Estilo para el formulario */
         .form-control-sm {
-            border-radius: 0.25rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e0a3a3; /* Borde suave */
             box-shadow: none;
+            transition: border-color 0.3s;
         }
+
+            .form-control-sm:focus {
+                border-color: #d18b8b; /* Color al enfocar */
+                box-shadow: 0 0 5px rgba(209, 139, 139, 0.5); /* Sombra suave al enfocar */
+            }
 
         /* Estilo para botones */
         .btn-success {
-            background-color: #28a745; /* Verde */
-            border-color: #28a745;
+            background-color: #f28e8e; /* Color rosado pálido */
+            border-color: #f28e8e;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, border-color 0.3s;
         }
 
             .btn-success:hover {
-                background-color: #218838; /* Verde más oscuro */
-                border-color: #1e7e34;
+                background-color: #d97171; /* Rosado más oscuro */
+                border-color: #d97171;
             }
 
         /* Estilo para las tarjetas */
         .card {
-            border-radius: 0.5rem;
+            border-radius: 1rem;
+            border: none; /* Sin bordes para un look limpio */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
         }
 
         /* Estilo para la tabla */
         .table {
             border-collapse: separate;
-            border-spacing: 0 1rem; /* Espacio entre filas */
+            border-spacing: 0 1rem;
         }
 
             .table th {
-                background-color: #f8d1d1; /* Color de fondo del encabezado */
-                color: #7a1b2d; /* Color de texto del encabezado */
-                border: none; /* Sin bordes para un look limpio */
-                border-radius: 0.25rem; /* Bordes redondeados en encabezados */
+                background-color: #f8d1d1;
+                color: #7a1b2d;
+                border: none;
+                border-radius: 0.5rem;
                 font-weight: bold;
+                padding: 0.75rem; /* Espaciado en celdas */
             }
 
             .table td {
-                background-color: #ffffff; /* Color de fondo de las celdas */
-                color: #333; /* Color de texto */
-                border: 1px solid #f8d1d1; /* Borde delgado y ligero */
-                border-radius: 0.25rem; /* Bordes redondeados en celdas */
-                vertical-align: middle; /* Alinear verticalmente el contenido */
+                background-color: #ffffff;
+                color: #333;
+                border: 1px solid #f8d1d1;
+                border-radius: 0.5rem;
+                vertical-align: middle;
+                padding: 0.5rem; /* Espaciado en celdas */
             }
 
         .table-striped tbody tr:nth-of-type(odd) {
-            background-color: #f9f1f1; /* Color de fondo para filas impares */
+            background-color: #f9f1f1;
+        }
+
+        /* Espaciado adicional en formularios */
+        .form-group {
+            margin-bottom: 1.5rem;
         }
     </style>
 }
 
 <div class="row">
     <div class="col-sm-8">
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-sm-12">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3 bg-second-primary">
+                <div class="card">
+                    <div class="card-header bg-second-primary">
                         <h6 class="m-0 font-weight-bold text-white">Cliente</h6>
                     </div>
                     <div class="card-body">
@@ -85,10 +106,10 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-sm-12">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3 bg-second-primary">
+                <div class="card">
+                    <div class="card-header bg-second-primary">
                         <h6 class="m-0 font-weight-bold text-white">Productos</h6>
                     </div>
                     <div class="card-body">
@@ -123,10 +144,10 @@
     </div>
 
     <div class="col-sm-4">
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-sm-12">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3 bg-second-primary">
+                <div class="card">
+                    <div class="card-header bg-second-primary">
                         <h6 class="m-0 font-weight-bold text-white">Detalle</h6>
                     </div>
                     <div class="card-body">
@@ -162,10 +183,10 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <div class="card shadow">
+                <div class="card">
                     <div class="card-body">
                         <div class="form-group mb-0">
-                            <button class="btn btn-success btn-sm btn-block" id="btnTerminarVenta">Terminar Venta</button>
+                            <button class="btn btn-success btn-sm btn-block" id="btnTerminarVenta">Registrar Venta</button>
                         </div>
                     </div>
                 </div>
@@ -175,9 +196,6 @@
 </div>
 
 @section Scripts {
-    <!-- ============================================================
-    =SCRIPTS PARA ESTA PAGINA
-    ===============================================================-->
     <script src="~/vendor/select2/select2.min.js"></script>
     <script src="~/vendor/select2/es.min.js"></script>
     <script src="~/js/vistas/Nueva_Venta.js"></script>

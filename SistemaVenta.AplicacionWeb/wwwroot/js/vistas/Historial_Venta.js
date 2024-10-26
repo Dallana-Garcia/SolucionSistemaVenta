@@ -136,7 +136,7 @@ $("#tbventa tbody").on("click", ".btn-info", function () {
         )
     })
 
-
+    //URL DEL BOTÓN
     $("#linkImprimir").attr("href", `/Venta/MostrarPDFVenta?numeroVenta=${d.numeroVenta}`)
 
 

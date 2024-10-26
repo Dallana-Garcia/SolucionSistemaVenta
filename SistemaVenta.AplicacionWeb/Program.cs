@@ -26,9 +26,10 @@ builder.Services.InyectarDependencia(builder.Configuration);
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
+//Utilizar los recursos del PDF
 var context = new CustomAssemblyLoadContext();
 context.LoadUnmanagedLibrary(Path.Combine(Directory.GetCurrentDirectory(), "Utilidades/LibreriaPDF/libwkhtmltox.dll"));
-builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+builder.Services.AddSingleton(typeof(IConverter),new SynchronizedConverter(new PdfTools()));
 
 var app = builder.Build();
 

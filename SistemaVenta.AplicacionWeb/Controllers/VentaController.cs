@@ -98,10 +98,12 @@ namespace SistemaVenta.AplicacionWeb.Controllers
             return StatusCode(StatusCodes.Status200OK, vmHistorialVenta);
         }
 
-        public IActionResult MostrarPDFVenta(string numerVenta)
+        //CREAR LA VISTA DE LA VISTA
+        public IActionResult MostrarPDFVenta(string numeroVenta)
         {
-            string urlPlantillaVista = $"{this.Request.Scheme}://{this.Request.Host}/Plantilla/PDFVenta?numeroVenta={numerVenta}";
+            string urlPlantillaVista = $"{this.Request.Scheme}://{this.Request.Host}/Plantilla/PDFVenta?numeroVenta={numeroVenta}";
 
+            //Estrucutra para generar el PDF
             var pdf = new HtmlToPdfDocument()
             {
                 GlobalSettings = new GlobalSettings()

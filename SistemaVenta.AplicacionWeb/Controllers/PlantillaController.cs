@@ -10,7 +10,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
 {
     public class PlantillaController : Controller
     {
-
+        //Variables para los servicios del PDF
         private readonly IMapper _mapper;
         private readonly INegocioService _negocioServicio;
         private readonly IVentaService _ventaServicio;
@@ -19,6 +19,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
         INegocioService negocioServicio, 
         IVentaService ventaServicio)
         {
+            //Se asigna el valor que tendrá cada uno
             _mapper = mapper;
             _negocioServicio = negocioServicio; 
             _ventaServicio = ventaServicio;
@@ -33,6 +34,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
             return View();
         }
 
+        //Crear el método que generará la vista
         public async Task<IActionResult> PDFVenta(string numeroVenta)
         {
 
